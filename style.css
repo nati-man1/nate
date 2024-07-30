@@ -1,0 +1,184 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #6b98bf;
+    justify-content: center; align-items: center;
+}
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    overflow: hidden;
+    position: relative;
+}
+
+.congrats {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 2em;
+    font-weight: bold;
+    color: transparent;
+    background: linear-gradient(45deg, #ff0066, #ffcc00, #33cc33, #0066ff, #ff0066);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: fadeIn 3s ease-in-out forwards, backgroundAnimation 5s infinite;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 100%;
+    }
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 6em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.2), 0 0 30px rgba(255, 255, 255, 0.4);
+    animation: neon 1.5s infinite alternate;
+}
+
+@keyframes neon {
+    from {
+        text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5), 0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px rgba(255, 255, 255, 0.4);
+    }
+    to {
+        text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.7);
+    }
+}
+
+
+.centered-heading {
+    font-size: 2em;
+    color: #333;
+}
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f8ff;
+}
+
+.container {
+    text-align: center;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f8ff;
+}
+
+.plant {
+    position: relative;
+    width: 20px;
+    height: 0;
+    animation: growPlant 5s forwards;
+}
+
+.stem {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-color: green;
+}
+
+.leaf {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: green;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(0);
+    animation: growLeaf 3s forwards;
+}
+
+.leaf1 {
+    left: -10px;
+    bottom: 40%;
+    animation-delay: 2s;
+}
+
+.leaf2 {
+    right: -10px;
+    bottom: 60%;
+    animation-delay: 3s;
+}
+
+.flower {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(0);
+    animation: bloomFlower 2s forwards;
+    animation-delay: 5s;
+}
+
+@keyframes growPlant {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 100px;
+    }
+}
+
+@keyframes growLeaf {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes bloomFlower {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
